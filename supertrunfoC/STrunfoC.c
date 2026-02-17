@@ -20,6 +20,8 @@ int main(){
     float pib2;
     int pontos_turisticos2;
 
+    //interação com o usuario: vai aparecendo no console as 
+    //informações sequenciadas para cadastro das cartas
     
     printf("Cadastro da carta 1\n");
 
@@ -46,12 +48,16 @@ int main(){
 
     printf("\nCadastro da carta 2\n");
 
+    //O & é usado para impressão de numeros inteiros e decimais
     printf("Estado (A-H): ");
     scanf(" %c", &estado2);
 
+    //O %3s é para limitar o campo a reconhecer apenas 3 campos da string
     printf("Codigo (ex: B02): ");
     scanf("%3s", codigo2);
 
+    /*o %49[^\n] vai servir para leitura do preenchimento com espaços "Rio de Janeiro"
+    Sem ele o campo faria a leitura somente "Rio" e o limite é 49 caracteres*/
     printf("Nome da cidade: ");
     scanf(" %49[^\n]", cidade2);
 
@@ -67,8 +73,9 @@ int main(){
     printf("Pontos turisticos: ");
     scanf("%d", &pontos_turisticos2);
 
+    //no final do cadastro da segunda carta ele imprime as cartas cadastradas
     printf("\n===== CARTAS CADASTRADAS =====\n");
-
+    printf("\n===== CARTA 1 =====\n");
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Codigo: %s\n", codigo1);
@@ -78,6 +85,7 @@ int main(){
     printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontos_turisticos1);
 
+    printf("\n===== CARTA 2 =====\n");
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
     printf("Codigo: %s\n", codigo2);
